@@ -27,7 +27,6 @@ const writeUrls = async (urls) => {
     await fs.writeFile(DATA_FILE, JSON.stringify(urls, null, 2))
 }
 
-//this api will create short code for urls
 app.post("/api/shorten", async (req, res) => {
 
     const { url, shortCode } = req.body;
@@ -37,10 +36,6 @@ app.post("/api/shorten", async (req, res) => {
 
     const customCode = shortCode || randomBytes(3).toString("hex")
     const urls = await readUrls()
-
-    // if (urls[customCode]) {
-    //     return res.status(400).json({ error: "Short code already exist" })
-    // }
 
     urls[customCode] = url
     await writeUrls(urls);
