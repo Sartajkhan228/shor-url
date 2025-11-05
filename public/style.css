@@ -51,6 +51,7 @@ button{
     background-color: rgb(1, 76, 123);
     color:white
 }
+
 button:hover{
     background-color: rgb(2, 38, 81);
 }
@@ -58,10 +59,12 @@ button:hover{
 h2{
     font-style: oblique;
 }
+
 ul{
     list-style: none;
     padding: 0;
 }
+
 li{
     margin: 10px 0;
     padding: 12px;

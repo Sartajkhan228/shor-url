@@ -39,8 +39,6 @@
             const url = formData.get('url')
             const shortCode = formData.get('shortCode')
 
-            // console.log(url,shortCode)
-
             try {
                 const response = await fetch("/api/shorten", {
                     method:"POST",
